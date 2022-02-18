@@ -1,0 +1,33 @@
+USE [curso]
+
+CREATE TABLE [Aluno] (
+    [Id] INT NOT NULL,
+    [Nome] NVARCHAR(80) NOT NULL,
+    [Nascimento] DATETIME NULL,
+    [Active] Bit NOT NULL DEFAULT(0), 
+    [Document] CHAR(11) NOT NULL
+)
+GO
+
+ALTER TABLE [Aluno]
+    ADD [Document] NVARCHAR(11)
+
+ALTER TABLE [Aluno]
+DROP COLUMN [Document]
+
+ALTER TABLE [Aluno]
+ALTER COLUMN [Id] int NOT NULL
+
+ALTER TABLE [Aluno]
+ALTER COLUMN [Document] CHAR(11) NOT NULL
+
+ALTER TABLE [Aluno]
+ALTER COLUMN [Nome] NVARCHAR(70) NOT NULL
+
+ALTER TABLE [Aluno]
+ALTER COLUMN [Nascimento] DATETIME NULL
+
+ALTER TABLE [Aluno]
+ALTER COLUMN [Active] BIT NOT NULL
+
+DROP TABLE [Aluno]
