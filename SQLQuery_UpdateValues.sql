@@ -1,0 +1,11 @@
+SELECT * FROM [Categoria]
+
+BEGIN TRANSACTION
+UPDATE
+[Categoria]
+SET
+[Nome] = 'Java'
+WHERE
+[Id] = 1
+--ROLLBACK
+COMMIT
